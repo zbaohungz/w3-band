@@ -93,4 +93,8 @@
         padding-top: 30px;
         text-align: center;
     }
+
+    .footer-list__msg{
+        width: 150px;
+    }
 }
