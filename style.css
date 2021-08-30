@@ -89,12 +89,71 @@ html{
     color: black;
 
 }
-
+/*
 #slider{
     margin-top: 50px;
     padding-top: 50%;
     background: url(http://baochinhphu.vn/Uploaded/duongphuonglien/2020_07_06/ha%20long.jpg) center / cover no-repeat;
 
+}
+
+*/
+#slider{
+    margin-top: 50px;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slider__imgs{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0px;
+}
+.slider__img{
+    width: 100%;
+    overflow: hidden;
+}
+.slider__onepic{
+    height: 100%;
+    width: 100%;
+}
+
+.slider__navs{
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.slider__nav-left{
+    margin-left: 20px;
+}
+.slider__nav-right{
+    margin-right: 20px;
+}
+.nav__icon-left{
+    font-size: 2.8rem;
+    color: #888;
+}
+
+.nav__icon-left:hover {
+    font-size: 3rem;
+    color: #333;
+}
+
+.nav__icon-right{
+    font-size: 2.8rem;
+    color: #888;
+}
+
+.nav__icon-right:hover {
+    font-size: 3rem;
+    color: #333;
 }
 
 #content{
@@ -106,6 +165,10 @@ html{
     text-align: center;
     padding: 55px;
 
+}
+
+.buy__ticket{
+    display: none;
 }
 
 #content .aboutp p{
@@ -123,6 +186,7 @@ html{
     padding: 6%;
 }
 .avatar-list__vhl{
+    position: relative;
     width: 45%;
 }
 
@@ -133,6 +197,44 @@ html{
 .avatar-list__vhl-pic2{
     width: 100%;
     height: 100%;
+}
+
+.avatar-list__vhl:hover .tour__data{
+    display: block;
+    opacity: 1;
+}
+.tour__data{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0, #333 , rgba(0, 0, 0, 0.1));
+    display: none;
+    opacity: 0;
+    transition: all linear 0.2s;
+}
+
+.tour__info{
+    color: white;
+    font-size: 1.6rem;
+    margin-top: 25%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.tour__ticket{
+    width: 110px;
+    height: 38px;
+    font-size: 1.2rem;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 #footer{
@@ -174,4 +276,135 @@ h3.footer-list__title{
 .footer-list__send{
     position: absolute;
     right: 0px;
+}
+
+/*modal*/
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: grown linear 0.1s;
+    will-change: transform, opacity;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ticket__select{
+    position: absolute;
+    background-color: white;
+    width: 800px;
+    height: 450px;
+}
+
+.buy__ticket:checked ~ .modal{
+    display: flex;
+}
+
+@keyframes grown {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+.ticket__title-option{
+    background-color: turquoise;
+    width: 100%;
+    height: 80px;
+}
+
+.ticket__select-title{
+    line-height: 80px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.close__it{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    font-size: 1.4rem;
+    margin-left: 300px;
+    cursor: pointer;
+}
+
+.mail__info-user{
+    display: flex;
+    margin: 60px 130px 0px 40px;
+}
+.mail__text{
+    font-size: 1.2rem;
+}
+.mail__info{
+    margin: 0px 0px 0px 20px;
+    flex: 1;
+    height: 1.6rem;
+}
+
+.SDT__info-user{
+    display: flex;
+    margin: 25px 130px 0px 40px;
+}
+.SDT__text{
+    font-size: 1.2rem;
+}
+.SDT__info{
+    margin: 0px 0px 0px 20px;
+    flex: 1;
+    height: 1.6rem;
+}
+
+.selects__option{
+    margin: 25px 130px 15px 40px;
+    height: 100px;
+    position: relative;
+
+}
+.label__text-option{
+    font-size: 1.2rem;
+}
+
+#place{
+    margin-left: 20px;
+    height: 1.6rem;
+    width: 338px;
+}
+.submit{
+    background-color: red;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+}
+.submit:hover {
+    background-color: rgb(250, 93, 93);
+}
+
+.thankyou{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-size: 1.2rem;
 }
