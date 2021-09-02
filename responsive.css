@@ -148,14 +148,16 @@
     /*modal*/
 
     .ticket__select{
-        width: 100%;
-        height: calc(100% - 50px);
-        bottom: 0;
+        width: 93%;
+        height: calc(100% - 100px);
+        bottom: 30px;
+        border-radius: 5px;
+        overflow: hidden;
     }
 
     .mail__info-user{
         display: block;
-        margin: 30px 0px 0px 0px;
+        margin: 30px 2px 0px 2px;
     }
     .mail__text{
         font-size: 1rem;
@@ -168,7 +170,7 @@
     
     .SDT__info-user{
         display: block;
-        margin: 10px 0px 0px 0px;
+        margin: 10px 2px 0px 2px;
     }
     .SDT__text{
         font-size: 1rem;
@@ -180,7 +182,7 @@
     }
     
     .selects__option{
-        margin: 10px 0px 10px 0px;
+        margin: 10px 2px 10px 2px;
         height: 120px;
         position: relative;
     
