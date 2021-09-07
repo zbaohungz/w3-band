@@ -1,6 +1,6 @@
 
 /*pc*/
-@media (min-width : 1024px) {
+@media (min-width : 1025px) {
     .mobile-menu_bt{
         display: none;
     }
@@ -12,7 +12,7 @@
 }
 
 /*tablet*/
-@media (min-width : 740px) and (max-width : 1023px) {
+@media (min-width : 740px) and (max-width : 1024px) {
     #ds li a{
         text-decoration: none;
         line-height: 50px;
@@ -26,6 +26,21 @@
 
     .footer-list__grow3{
         display: none  ;
+    }
+
+    .ticket__select{
+        position: absolute;
+        background-color: white;
+        width: 730px;
+        height: 450px;
+        top: 200px;
+    }
+
+    #place{
+    height: 1.6rem;
+    width: 50%;
+    position: absolute;
+    right: 0px;
     }
 }
 

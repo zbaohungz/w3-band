@@ -59,6 +59,8 @@ html{
     left: 0;
     background-color: rgba(255, 255, 255, 0.733);
     box-shadow: 0 0 2px rgb(27, 23, 23);
+    box-shadow: 1px 1px 2px 2px #c1c0c0;
+    width: 100%;
     
 }
 
@@ -98,6 +100,8 @@ html{
 }
 
 */
+
+/* //next slider
 #slider{
     margin-top: 50px;
     height: 600px;
@@ -105,20 +109,41 @@ html{
     overflow: hidden;
     position: relative;
 }
+
 .slider__imgs{
-    width: 300%;
+    width: 400vw;
     height: 100%;
     display: flex;
     position: absolute;
     left: 0px;
+    transition: 0.5s all;
 }
+
 .slider__img{
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
 }
+
 .slider__onepic{
+    width: 100vw;
     height: 100%;
-    width: 100%;
+}
+    /*
+    animation: zoomout 4s ease-in-out;
+}
+@keyframes zoomout{
+    from{
+        transform: scale(1s);
+    }
+    to{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+
+.slider__run{
+    
+    transform: translateX(-100vw);
 }
 
 .slider__navs{
@@ -155,7 +180,84 @@ html{
     font-size: 3rem;
     color: #333;
 }
+*/
 
+#slider{
+    margin-top: 50px;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider__imgs{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0px;
+    transition: 0.5s all;
+    overflow: hidden;
+}
+
+.slider__img{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.slider__img.js-none{
+    display: none;
+    
+}
+
+.slider__onepic{
+    width: 100%;
+    height: 100%;
+}
+@keyframes zoomout{
+    from{
+        transform: scale(1s);
+    }
+    to{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.slider__navs{
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+    
+}
+
+.slider__nav-left{
+    margin-left: 20px;
+}
+.slider__nav-right{
+    margin-right: 20px;
+}
+.nav__icon-left{
+    font-size: 2.8rem;
+    color: #888;
+}
+
+.nav__icon-left:hover {
+    font-size: 3rem;
+    color: #333;
+}
+
+.nav__icon-right{
+    font-size: 2.8rem;
+    color: #888;
+}
+
+.nav__icon-right:hover {
+    font-size: 3rem;
+    color: #333;
+}
 #content{
     background-color: burlywood;
     position: relative;
